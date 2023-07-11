@@ -1,0 +1,31 @@
+{
+    "workspace.library": [
+        "/Users/gabriel/.config/nvim",
+        "/Users/gabriel/.local/share/nvim/lazy/lazy.nvim",
+        "/Users/gabriel/.local/share/nvim/lazy/vim-illuminate",
+        "/Users/gabriel/.local/share/nvim/lazy/mason.nvim",
+        "/Users/gabriel/.local/share/nvim/lazy/mason-lspconfig.nvim",
+        "/Users/gabriel/.local/share/nvim/lazy/nvim-lspconfig",
+        "/Users/gabriel/.local/share/nvim/lazy/nvim-treesitter-textobjects",
+        "/Users/gabriel/.local/share/nvim/lazy/nvim-treesitter",
+        "/Users/gabriel/.local/share/nvim/lazy/friendly-snippets",
+        "/Users/gabriel/.local/share/nvim/lazy/cmp_luasnip",
+        "/Users/gabriel/.local/share/nvim/lazy/LuaSnip",
+        "/Users/gabriel/.local/share/nvim/lazy/cmp-path",
+        "/Users/gabriel/.local/share/nvim/lazy/cmp-buffer",
+        "/Users/gabriel/.local/share/nvim/lazy/cmp-nvim-lua",
+        "/Users/gabriel/.local/share/nvim/lazy/cmp-nvim-lsp",
+        "/Users/gabriel/.local/share/nvim/lazy/nvim-cmp",
+        "/Users/gabriel/.local/share/nvim/lazy/catppuccin",
+        "/opt/homebrew/Cellar/neovim/0.9.1/share/nvim/runtime",
+        "/opt/homebrew/Cellar/neovim/0.9.1/lib/nvim",
+        "/Users/gabriel/.local/state/nvim/lazy/readme",
+        "/Users/gabriel/.local/share/nvim/lazy/cmp_luasnip/after",
+        "/Users/gabriel/.local/share/nvim/lazy/cmp-path/after",
+        "/Users/gabriel/.local/share/nvim/lazy/cmp-buffer/after",
+        "/Users/gabriel/.local/share/nvim/lazy/cmp-nvim-lua/after",
+        "/Users/gabriel/.local/share/nvim/lazy/cmp-nvim-lsp/after",
+        "/Users/gabriel/.local/share/nvim/lazy/catppuccin/after",
+        "${3rd}/luassert/library"
+    ]
+}

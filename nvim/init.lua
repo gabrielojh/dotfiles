@@ -1,0 +1,2 @@
+-- Load configs
+require('configs')
