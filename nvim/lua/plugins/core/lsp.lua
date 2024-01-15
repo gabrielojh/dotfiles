@@ -2,6 +2,7 @@ return {
   {
     "neovim/nvim-lspconfig",
     dependencies = {
+      "mfussenegger/nvim-jdtls",
       "williamboman/mason-lspconfig.nvim",
       "williamboman/mason.nvim",
       "RRethy/vim-illuminate",
@@ -39,10 +40,10 @@ return {
         lsp_map("<leader>lr", vim.lsp.buf.rename, bufnr, "Rename symbol")
         lsp_map("<leader>la", vim.lsp.buf.code_action, bufnr, "Code action")
         lsp_map("<leader>ld", vim.lsp.buf.type_definition, bufnr, "Type definition")
-        -- lsp_map("<leader>ls", require("telescope.builtin").lsp_document_symbols, bufnr, "Document symbols")
+        lsp_map("<leader>ls", require("telescope.builtin").lsp_document_symbols, bufnr, "Document symbols")
 
         lsp_map("gd", vim.lsp.buf.definition, bufnr, "Goto Definition")
-        -- lsp_map("gr", require("telescope.builtin").lsp_references, bufnr, "Goto References")
+        lsp_map("gr", require("telescope.builtin").lsp_references, bufnr, "Goto References")
         lsp_map("gI", vim.lsp.buf.implementation, bufnr, "Goto Implementation")
         lsp_map("K", vim.lsp.buf.hover, bufnr, "Hover Documentation")
         lsp_map("gD", vim.lsp.buf.declaration, bufnr, "Goto Declaration")
@@ -59,9 +60,14 @@ return {
       end
 
       -- Java LSP
-      require("lspconfig")["jdtls"].setup({
-        on_attach = on_attach,
-      })
+      -- local config = {
+      --   cmd = { "/opt/homebrew/Cellar/jdtls/1.25.0/bin/jdtls" },
+      --   root_dir = vim.fs.dirname(vim.fs.find({ 'gradlew', '.git', 'mvnw' }, { upward = true })[1]),
+      -- }
+      -- require('jdtls').start_or_attach(config)
+      -- require("lspconfig")["jdtls"].setup({
+      --   on_attach = on_attach,
+      -- })
 
       -- XML LSP
       require("lspconfig")["lemminx"].setup({
@@ -70,6 +76,20 @@ return {
 
       -- JavaScript LSP
       require("lspconfig")["quick_lint_js"].setup({
+        on_attach = on_attach,
+      })
+
+      require 'lspconfig'.tsserver.setup({
+        on_attach = on_attach,
+      })
+
+      -- Docker
+      require("lspconfig")["dockerls"].setup({
+        on_attach = on_attach,
+      })
+
+      -- Docker Compose
+      require("lspconfig")["docker_compose_language_service"].setup({
         on_attach = on_attach,
       })
 
